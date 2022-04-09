@@ -1,7 +1,7 @@
 # Poin A
 p = 0.2
 x = 3
-P <- dgeom(x = n, prob = p)
+P <- dgeom(x, p)
 P
 
 # Poin B
@@ -12,9 +12,11 @@ mean
 
 
 # Poin D
-hist(rgeom(n, prob), main = 'Histogram Geometrik')
+n = 10000
+hist(rgeom(n, prob = p), main = 'Histogram Geometrik')
 
 # Poin E
-mean = var = lambda
+mean = n * (prob = p)
+var = n * (prob = p) * (1 - (prob = p))
 mean
 var
