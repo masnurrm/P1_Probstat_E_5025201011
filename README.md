@@ -8,7 +8,9 @@ Repository untuk pengerjaan Praktikum 1 mata kuliah Probabilitas dan Statistik 2
 
 ## Soal 1
 > Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya.
- - Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0.20 dari populasi menghadiri acara vaksinasi? (distribusi Geometrik)
+ - Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0.20 dari populasi menghadiri acara vaksinasi?
+
+    Penyelesaian dilakukan dengan menggunakan distribusi geometrik dengan bantuan fungsi dgeom(). Dari fungsi tersebut, didapatkan hasil sebagai berikut, yaitu peluang sebesar XX. Fungsi tersebut berisi x (sampel orang yang tidak menghadiri acara vaksinasi) dan p (peluang kehadiran orang menghadiri acara vaksinasi) sebagai parameternya.
     ```R
     # Poin A
     p = 0.2
@@ -18,7 +20,9 @@ Repository untuk pengerjaan Praktikum 1 mata kuliah Probabilitas dan Statistik 2
     ```
     Dengan hasil sebagai berikut
     ![1a](https://user-images.githubusercontent.com/64957624/162588258-e668ea40-94aa-493a-81f1-e1fe31f12aea.png)
- - Mean distribusi Geometrik dengan 10000 data random, prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 (distribusi Geometrik acak () == 3)
+ - Mean distribusi Geometrik dengan 10000 data random, prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 (distribusi Geometrik acak () == 3)!
+
+    Penyelesaian dilakukan dengan menggunakan rumus rerata dengan parameter berupa angka acak dari distribusi Geometri yang telah dilakukan dengan bantuan fungsi rgeom(). Dari rerata fungsi tersebut, didapatkan hasil sebagai berikut, yaitu rerata sebesar XX. Fungsi rgeom() tersebut berisi banyaknya data acak orang dan peluang kehadiran orang dalam menghadiri acara vaksinasi.
     ```R
     # Poin B
     mean(rgeom(n = 10000, prob = p) == 3)
@@ -28,9 +32,11 @@ Repository untuk pengerjaan Praktikum 1 mata kuliah Probabilitas dan Statistik 2
     ![1b](https://user-images.githubusercontent.com/64957624/162588257-8dee6bc6-2c60-4414-a700-2fde0d06568c.png)
  - Bandingkan hasil poin a dan b, apa kesimpulan yang bisa didapatkan?
  
-    jadi gini, 
+    Kedua poin tersebut menghasilkan hasil yang berbeda. Pada poin A, dilakukan distribusi Geomterik biasa dan didapatkan nilai sebesar . Nilai tersebut merupakan nilai terbesar dari peluang-peluang yang dapat terjadi pada kejadian tersebut. Sedangkan pada poin B, didapatkan hasil sebesar karena merupakan rata-rata dari semua peluang-peluang yang dapat terjadi pada kejadian tersebut. Untuk kebutuhan sampling, poin B lebih baik untuk digunakan daripada poin A. 
     
  - Histogram distribusi Geometrik, dengan peluang X = 3 gagal sebelum sukses pertama
+
+    Untuk membuat histogram distribusi Geometrik, digunakan fungsi hist() dengan parameter fungsi distribusi Geometrik seperti yang telah dilakukan pada poin-poin sebelumnya.
     ```R
     # Poin D
     n = 10000
@@ -38,12 +44,18 @@ Repository untuk pengerjaan Praktikum 1 mata kuliah Probabilitas dan Statistik 2
     ```
     Dengan hasil sebagai berikut
     ![1d](https://user-images.githubusercontent.com/64957624/162588256-1f056980-dae7-4c05-9914-38fc64b0726f.png)
- - Nilai rataan (μ) dan varian (σ²) dari distribusi Geometrik
+ - Nilai rataan (μ) dan varian (σ²) dari distribusi Geometrik.
+
+    Untuk mendapatkan nilai rataan menggunakan formula banyak data dikali dengan peluang kejadian.
     ```R
     # Poin E
     mean = n * (prob = p)
-    var = n * (prob = p) * (1 - (prob = p))
     mean
+    ```
+    Untuk mendapatkan nilai varian menggunakan formula nilai rataan dan dikali dengan komplemen dari peluang kejadian.
+    ```R
+    # Poin E
+    var = n * (prob = p) * (1 - (prob = p))
     var
     ```
     Dengan hasil sebagai berikut
