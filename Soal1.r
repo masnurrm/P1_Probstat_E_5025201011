@@ -16,7 +16,7 @@ n = 10000
 hist(rgeom(n, prob = p), main = 'Histogram Geometrik')
 
 # Poin E
-mean = n * (prob = p)
-var = n * (prob = p) * (1 - (prob = p))
+mean = 1 / p
+variance = (1 - p) / (p ^ 2)
 mean
-var
+variance

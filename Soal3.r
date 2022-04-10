@@ -16,6 +16,6 @@ hist(rpois(n, lambda), main = "Histogram Poisson")
 # asdahvsd
 
 # Poin D
-mean = var = lambda
+mean = variance = lambda
 mean
-var
+variance

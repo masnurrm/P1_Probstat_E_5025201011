@@ -11,6 +11,6 @@ hist(rbinom(x, n, prob = p), xlab = "X", ylab = "Frekuensi", main = "Histogram o
 
 # Poin C
 mean = n * (prob = p)
-var = n * (prob = p) * (1 - (prob = p))
+variance = n * (prob = p) * (1 - (prob = p))
 mean
-var 
+variance 
