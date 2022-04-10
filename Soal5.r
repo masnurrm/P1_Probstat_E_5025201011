@@ -1,9 +1,10 @@
 lambda = 3
 
 # Poin A
-set.seed(10)
-rnorm(10)
-probability = rexp(10, rate = lambda)
+set.seed(1)
+rnorm(1)
+probability = dexp(1, rate = lambda)
+# probability = rexp(1, rate = lambda)
 probability
 
 # Poin B
