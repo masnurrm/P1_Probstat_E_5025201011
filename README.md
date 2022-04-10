@@ -10,7 +10,7 @@ Repository untuk pengerjaan Praktikum 1 mata kuliah Probabilitas dan Statistik 2
 > Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya.
  - Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0.20 dari populasi menghadiri acara vaksinasi?
 
-    Penyelesaian dilakukan dengan menggunakan distribusi geometrik dengan bantuan fungsi dgeom(). Dari fungsi tersebut, didapatkan hasil sebagai berikut, yaitu peluang sebesar XX. Fungsi tersebut berisi x (sampel orang yang tidak menghadiri acara vaksinasi) dan p (peluang kehadiran orang menghadiri acara vaksinasi) sebagai parameternya.
+    Penyelesaian dilakukan dengan menggunakan distribusi geometrik dengan bantuan fungsi dgeom(). Dari fungsi tersebut, didapatkan hasil sebagai berikut, yaitu peluang sebesar 0.1024. Fungsi tersebut berisi x (sampel orang yang tidak menghadiri acara vaksinasi) dan p (peluang kehadiran orang menghadiri acara vaksinasi) sebagai parameternya.
     ```R
     # Poin A
     p = 0.2
@@ -22,7 +22,7 @@ Repository untuk pengerjaan Praktikum 1 mata kuliah Probabilitas dan Statistik 2
     ![1a](https://user-images.githubusercontent.com/64957624/162588258-e668ea40-94aa-493a-81f1-e1fe31f12aea.png)
  - Mean distribusi Geometrik dengan 10000 data random, prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 (distribusi Geometrik acak () == 3)!
 
-    Penyelesaian dilakukan dengan menggunakan rumus rerata dengan parameter berupa angka acak dari distribusi Geometri yang telah dilakukan dengan bantuan fungsi rgeom(). Dari rerata fungsi tersebut, didapatkan hasil sebagai berikut, yaitu rerata sebesar XX. Fungsi rgeom() tersebut berisi banyaknya data acak orang dan peluang kehadiran orang dalam menghadiri acara vaksinasi.
+    Penyelesaian dilakukan dengan menggunakan rumus rerata dengan parameter berupa angka acak dari distribusi Geometri yang telah dilakukan dengan bantuan fungsi rgeom(). Dari rerata fungsi tersebut, didapatkan hasil yang cenderung berubah-ubah. Salah satu hasilnya adalah sebagai berikut, yaitu rerata sebesar 0.1028. Fungsi rgeom() tersebut berisi banyaknya data acak orang dan peluang kehadiran orang dalam menghadiri acara vaksinasi.
     ```R
     # Poin B
     mean(rgeom(n = 10000, prob = p) == 3)
