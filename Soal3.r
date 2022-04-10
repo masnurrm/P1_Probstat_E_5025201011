@@ -11,9 +11,7 @@ n = 356
 hist(rpois(n, lambda), main = "Histogram Poisson")
 
 #Poin C
-# kahjdavsdaasdas
-# asdjahbsdajs
-# asdahvsd
+# Penjelasan terdapat pada writeup dokumentasi readme.md
 
 # Poin D
 mean = variance = lambda

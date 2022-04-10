@@ -6,10 +6,9 @@ P
 
 # Poin B
 mean(rgeom(n = 10000, prob = p) == 3)
-mean
 
 # Poin C
-
+# Penjelasan terdapat pada writeup dokumentasi readme.md
 
 # Poin D
 n = 10000
