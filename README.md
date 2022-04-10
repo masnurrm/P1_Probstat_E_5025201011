@@ -165,23 +165,44 @@ Repository untuk pengerjaan Praktikum 1 mata kuliah Probabilitas dan Statistik 2
  > Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan:
  - Fungsi Probabilitas dari distribusi Exponensial
     ```R
-
-    ```
-    Dengan hasil sebagai berikut
-
- - Histogram dari distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
-    ```R
     lambda = 3
 
     # Poin A
+    set.seed(1)
+    rnorm(1)
+    probability = dexp(1, rate = lambda)
+    # probability = rexp(1, rate = lambda)
+    probability
     ```
     Dengan hasil sebagai berikut
+    ![5a](https://user-images.githubusercontent.com/64957624/162611332-cb9754cf-babb-4f35-be19-c8ebbe57253c.png)
+
+ - Histogram dari distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+    ```R
+    # Poin B
+    set.seed(1)
+    hist(rexp(10, rate = lambda), main = "Histogram Exponetial with 10 Random Generations")
+    hist(rexp(100, rate = lambda), main = "Histogram Exponetial with 100 Random Generations")
+    hist(rexp(1000, rate = lambda), main = "Histogram Exponetial with 1000 Random Generations")
+    hist(rexp(10000, rate = lambda), main = "Histogram Exponetial with 10000 Random Generations")
+
+    ```
+    Dengan hasil sebagai berikut
+    ![5b](https://user-images.githubusercontent.com/64957624/162611328-80c97530-e889-4f33-ac67-159c2a5d4705.png)
+    
 
  - Nilai rataan (μ) dan varian (σ²) dari distribusi Exponensial untuk n = 100 dan λ = 3
     ```R
-
+    # Poin C
+    n = 100
+    set.seed(1)
+    mean = mean(rexp(n, rate = lambda))
+    variance = (sd(rexp(n, rate = lambda))) ^ 2
+    mean
+    variance
     ```
     Dengan hasil sebagai berikut
+    ![5c](https://user-images.githubusercontent.com/64957624/162611326-c785bd56-b67e-45f7-942a-3629094f7001.png)
 
  </br>
 
@@ -194,20 +215,49 @@ Repository untuk pengerjaan Praktikum 1 mata kuliah Probabilitas dan Statistik 2
     sd = 8
 
     # Poin A
+    set.seed(1)
+    data <- rnorm(n, mean, sd)
+    data
+    summary(data)
 
+    x1 = runif(1, min = min(data), max = mean)
+    x2 = runif(1, min = mean, max = max(data))
+    x1
+    x2
+
+    probability1 <- pnorm(x1, mean, sd)
+    probability2 <- pnorm(x2, mean, sd)
+    probability1
+    probability2
+
+    probability <- probability2 - probability1
+    plot(data)
     ```
     Dengan hasil sebagai berikut
+    ![6a](https://user-images.githubusercontent.com/64957624/162611323-d56dc4e5-9244-4340-8c5d-ec88e36dd1c3.png)
 
  - Generate histogram dari distribusi Normal dengan breaks 50 
     ```R
+    # Poin B
+    breaks = 50
+    hist(data, breaks, main = "5025201011_Nur Muhammad Ainul Yaqin_Probstat_E_DNhistogram")
 
     ```
     Dengan hasil sebagai berikut
+    ![6b](https://user-images.githubusercontent.com/64957624/162611321-fe956d7f-6173-4020-bf49-ac0a5b708a60.png)
 
  - Nilai varian (σ²) dari hasil generate random nilai distribusi Normal
     ```R
-
+    # Poin C
+    variance = (sd(data)) ^ 2
+    variance
     ```
     Dengan hasil sebagai berikut
+    ![6c](https://user-images.githubusercontent.com/64957624/162611333-1e23ca0e-9986-4f50-b4e1-f9ee3b4b714d.png)
+
+</br>
+
+## Penutup
+Mohon maaf jika ada kesalahan dalam pengerjaan praktikum 1 ini. Terima kasih.
     
 
