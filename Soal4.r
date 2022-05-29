@@ -1,17 +1,16 @@
-# Poin A
+x = 2
+v = 10
 
+# Poin A
+probability = dchisq(x, 10)
+probability
 
 # Poin B
-
+n = 100
+hist(rchisq(n, v), xlab = "X", ylab = "V", main = "Grafik Histogram")
 
 # Poin C
-
-
-# Poin D
-
-
-# Poin E
-
-
-# Poin F
-
+mean = v
+variance = 2 * v
+mean
+variance 
